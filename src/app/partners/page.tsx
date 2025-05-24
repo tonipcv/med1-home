@@ -32,6 +32,11 @@ export default function PartnersPage() {
     }));
   };
 
+  const handleGetStarted = () => {
+    // Handle get started logic
+    console.log("Get Started button clicked");
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -49,7 +54,10 @@ export default function PartnersPage() {
               <Button variant="ghost" className="text-gray-600 hover:text-gray-900 hover:bg-transparent px-3 py-2 text-sm tracking-[-0.03em]">
                 Sign In
               </Button>
-              <Button className="bg-[#eaf212] text-gray-800 hover:bg-[#eaf212]/90 transition-all duration-300 px-4 py-2 text-sm tracking-[-0.03em] rounded-md hidden md:block">
+              <Button
+                onClick={handleGetStarted}
+                className="bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95"
+              >
                 Get Started
               </Button>
               <button className="md:hidden text-gray-600 hover:text-gray-900 transition-colors">

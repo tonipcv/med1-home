@@ -19,8 +19,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://med1.app'),
-  title: "MED1 | Smart CRM for Healthcare Professionals",
-  description: "The first intelligent CRM focused on patient acquisition and retention through referrals. Be TOP1 in your niche.",
+  title: "MED1 | #1 Healthcare CRM Platform for Medical Practice Growth",
+  description: "Transform your medical practice with MED1's intelligent CRM. Boost patient acquisition, automate referrals, and grow your healthcare business with our all-in-one practice management solution. Join leading healthcare professionals using MED1 to become TOP1 in their niche.",
   keywords: [
     "healthcare crm",
     "medical practice management",
@@ -36,32 +36,43 @@ export const metadata: Metadata = {
     "patient relationship management",
     "medical scheduling",
     "healthcare technology",
-    "medical practice growth"
+    "medical practice growth",
+    "doctor practice management",
+    "healthcare practice optimization",
+    "medical office automation",
+    "patient engagement platform",
+    "healthcare business growth"
   ],
-  authors: [{ name: "MED1" }],
+  authors: [{ name: "MED1", url: "https://med1.app" }],
   category: "Healthcare Technology",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://med1.app",
     siteName: "MED1",
-    title: "MED1 | Be TOP1 in Healthcare",
-    description: "Transform your medical practice with our intelligent CRM. Increase patient acquisition and retention through smart referrals.",
+    title: "MED1 | Transform Your Medical Practice with Smart CRM",
+    description: "Leading healthcare CRM platform for medical practices. Increase patient acquisition, automate referrals, and grow your practice with data-driven insights.",
     images: [
       {
-        url: "/icon.png?v=1",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "MED1 - Smart Healthcare CRM Platform",
+      },
+      {
+        url: "/icon.png",
         width: 512,
         height: 512,
-        alt: "MED1 - Smart Healthcare CRM",
-      },
+        alt: "MED1 Logo",
+      }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MED1 | Be TOP1 in Healthcare",
-    description: "Transform your medical practice with our intelligent CRM. Increase patient acquisition and retention through smart referrals.",
+    title: "MED1 | Transform Your Medical Practice with Smart CRM",
+    description: "Leading healthcare CRM platform for medical practices. Increase patient acquisition, automate referrals, and grow your practice with data-driven insights.",
     creator: "@med1app",
-    images: ["/icon.png?v=1"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -80,14 +91,17 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' }
     ],
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180' }
+    ]
   },
   viewport: {
     width: "device-width",
     initialScale: 1,
-    maximumScale: 1,
+    maximumScale: 5,
+    userScalable: true,
   },
   verification: {
     google: "your-google-verification-code",
@@ -98,10 +112,14 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://med1.app",
+    languages: {
+      'en-US': 'https://med1.app',
+      'pt-BR': 'https://med1.app/pt'
+    }
   },
   other: {
-    "msapplication-TileColor": "#2E8DFF",
-    "theme-color": "#2E8DFF"
+    "msapplication-TileColor": "#000000",
+    "theme-color": "#000000"
   }
 };
 
@@ -151,10 +169,8 @@ export default function RootLayout({
         {/* End Facebook Pixel Code */}
 
         <link rel="canonical" href="https://med1.app" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#2E8DFF" />
       </head>

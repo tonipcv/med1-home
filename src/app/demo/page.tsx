@@ -387,24 +387,24 @@ export default function DemoPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-zinc-800">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <img src="@logo.png" alt="Logo" className="h-8" />
+            <img src="/logo.png" alt="HTSP Logo" className="h-8 brightness-0 invert" />
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-10">
-              <a href="/partners" className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-[-0.03em]">
+              <a href="/partners" className="text-zinc-400 hover:text-white transition-colors text-sm tracking-[-0.03em]">
                 Partners
               </a>
-              <a href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-[-0.03em]">
+              <a href="/pricing" className="text-zinc-400 hover:text-white transition-colors text-sm tracking-[-0.03em]">
                 Pricing
               </a>
               <Button 
-                onClick={() => window.location.href = 'https://www.med1.app/auth/signin'}
-                className="bg-[#eaf212] text-black hover:bg-[#eaf212]/90 transition-colors px-6 py-2 text-sm font-medium tracking-[-0.03em] rounded-full"
+                onClick={() => window.location.href = '/auth/signin'}
+                className="bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95"
               >
                 Sign In
               </Button>
@@ -412,7 +412,7 @@ export default function DemoPage() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2.5 text-gray-900 hover:text-gray-600 transition-colors bg-white rounded-full shadow-sm"
+              className="md:hidden p-2.5 text-white hover:text-zinc-400 transition-colors bg-zinc-900/80 rounded-full border border-zinc-800"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -434,7 +434,7 @@ export default function DemoPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+              className="fixed inset-0 bg-black/90 backdrop-blur-sm z-40"
               onClick={() => setIsMenuOpen(false)}
             />
             
@@ -444,14 +444,14 @@ export default function DemoPage() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 100 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-xl overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-zinc-900 z-50 shadow-xl overflow-y-auto border-l border-zinc-800"
             >
               <div className="p-6">
                 <div className="flex justify-between items-center mb-8">
-                  <img src="@logo.png" alt="Logo" className="h-8" />
+                  <img src="/logo.png" alt="HTSP Logo" className="h-8 brightness-0 invert" />
                   <button
                     onClick={() => setIsMenuOpen(false)}
-                    className="p-2 text-gray-900 hover:text-gray-600 transition-colors"
+                    className="p-2 text-white hover:text-zinc-400 transition-colors"
                   >
                     <XMarkIcon className="h-6 w-6" />
                   </button>
@@ -460,24 +460,24 @@ export default function DemoPage() {
                 <div className="flex flex-col space-y-4">
                   <a
                     href="/partners"
-                    className="text-base text-gray-900 hover:text-gray-600 transition-colors tracking-[-0.03em] py-2"
+                    className="text-base text-zinc-400 hover:text-white transition-colors tracking-[-0.03em] py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Partners
                   </a>
                   <a
                     href="/pricing"
-                    className="text-base text-gray-900 hover:text-gray-600 transition-colors tracking-[-0.03em] py-2"
+                    className="text-base text-zinc-400 hover:text-white transition-colors tracking-[-0.03em] py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Pricing
                   </a>
                   <Button
                     onClick={() => {
-                      window.location.href = 'https://www.med1.app/auth/signin';
+                      window.location.href = '/auth/signin';
                       setIsMenuOpen(false);
                     }}
-                    className="w-full bg-[#eaf212] text-gray-800 hover:bg-[#eaf212]/90 transition-colors py-3 text-base font-medium tracking-[-0.03em] rounded-full mt-4"
+                    className="w-full bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95"
                   >
                     Sign In
                   </Button>
@@ -499,30 +499,30 @@ export default function DemoPage() {
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-[-0.03em] leading-tight">
+              <h1 className="text-4xl sm:text-5xl font-extralight text-white tracking-[-0.03em] leading-tight">
                 Schedule Your Free Demo
               </h1>
-              <p className="text-xl text-gray-600 tracking-[-0.03em]">
-                Discover how MED1 can transform your practice with our personalized demo session.
+              <p className="text-xl text-zinc-400 tracking-[-0.03em]">
+                Discover how HTSP can transform your high-ticket sales process.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
-                    <ClockIcon className="w-5 h-5 text-gray-900" />
+                  <div className="w-10 h-10 rounded-full bg-zinc-900/50 border border-zinc-800 flex items-center justify-center">
+                    <ClockIcon className="w-5 h-5 text-white" />
                   </div>
-                  <p className="text-gray-700">30-minute personalized session</p>
+                  <p className="text-zinc-300">30-minute personalized session</p>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
-                    <UserIcon className="w-5 h-5 text-gray-900" />
+                  <div className="w-10 h-10 rounded-full bg-zinc-900/50 border border-zinc-800 flex items-center justify-center">
+                    <UserIcon className="w-5 h-5 text-white" />
                   </div>
-                  <p className="text-gray-700">One-on-one with our specialists</p>
+                  <p className="text-zinc-300">One-on-one with our sales experts</p>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
-                    <BuildingOfficeIcon className="w-5 h-5 text-gray-900" />
+                  <div className="w-10 h-10 rounded-full bg-zinc-900/50 border border-zinc-800 flex items-center justify-center">
+                    <BuildingOfficeIcon className="w-5 h-5 text-white" />
                   </div>
-                  <p className="text-gray-700">Tailored to your practice needs</p>
+                  <p className="text-zinc-300">Tailored to your business needs</p>
                 </div>
               </div>
             </motion.div>
@@ -532,7 +532,7 @@ export default function DemoPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm"
+              className="bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800 shadow-[0_0_15px_rgba(255,255,255,0.05)]"
             >
               <form className="space-y-6" onSubmit={async (e) => {
                 e.preventDefault();
@@ -562,7 +562,6 @@ export default function DemoPage() {
                     throw new Error(result.error || 'Failed to submit demo request');
                   }
 
-                  // Show modal instead of redirecting
                   setShowConfirmation(true);
                 } catch (error) {
                   console.error('Error submitting form:', error);
@@ -570,7 +569,7 @@ export default function DemoPage() {
                 }
               }}>
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="name" className="block text-sm font-light text-zinc-400 mb-1">
                     Full Name
                   </label>
                   <input
@@ -578,12 +577,12 @@ export default function DemoPage() {
                     name="name"
                     id="name"
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#eaf212] focus:border-transparent bg-white text-gray-900"
-                    placeholder="Dr. John Smith"
+                    className="w-full px-4 py-2 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:ring-2 focus:ring-white/10 focus:border-transparent text-white placeholder-zinc-500"
+                    placeholder="John Smith"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="email" className="block text-sm font-light text-zinc-400 mb-1">
                     Email
                   </label>
                   <input
@@ -591,12 +590,12 @@ export default function DemoPage() {
                     name="email"
                     id="email"
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#eaf212] focus:border-transparent bg-white text-gray-900"
+                    className="w-full px-4 py-2 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:ring-2 focus:ring-white/10 focus:border-transparent text-white placeholder-zinc-500"
                     placeholder="john@example.com"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="phone" className="block text-sm font-light text-zinc-400 mb-1">
                     Phone
                   </label>
                   <input
@@ -604,26 +603,26 @@ export default function DemoPage() {
                     name="phone"
                     id="phone"
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#eaf212] focus:border-transparent bg-white text-gray-900"
+                    className="w-full px-4 py-2 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:ring-2 focus:ring-white/10 focus:border-transparent text-white placeholder-zinc-500"
                     placeholder="+1 (555) 000-0000"
                   />
                 </div>
                 <div>
-                  <label htmlFor="specialty" className="block text-sm font-medium text-gray-700 mb-1">
-                    Specialty
+                  <label htmlFor="specialty" className="block text-sm font-light text-zinc-400 mb-1">
+                    Business Type
                   </label>
                   <input
                     type="text"
                     name="specialty"
                     id="specialty"
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#eaf212] focus:border-transparent bg-white text-gray-900"
-                    placeholder="e.g., Cardiology"
+                    className="w-full px-4 py-2 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:ring-2 focus:ring-white/10 focus:border-transparent text-white placeholder-zinc-500"
+                    placeholder="e.g., Consulting, Agency, SaaS"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-[#eaf212] text-gray-900 hover:bg-[#eaf212]/90 transition-colors py-3 rounded-full font-medium tracking-[-0.03em]"
+                  className="w-full bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95"
                 >
                   Schedule Demo
                 </Button>
@@ -634,7 +633,7 @@ export default function DemoPage() {
       </section>
 
       {/* What to Expect Section */}
-      <section className="py-16 px-4 sm:px-6 bg-gray-50">
+      <section className="py-16 px-4 sm:px-6 bg-black border-t border-zinc-800">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -642,11 +641,11 @@ export default function DemoPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 tracking-[-0.03em]">
+            <h2 className="text-3xl font-extralight mb-4 text-white tracking-[-0.03em]">
               What to Expect in Your Demo
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Get a comprehensive overview of how MED1 can help your practice grow
+            <p className="text-zinc-400 max-w-2xl mx-auto">
+              Get a comprehensive overview of how HTSP can help your business scale
             </p>
           </motion.div>
 
@@ -654,27 +653,27 @@ export default function DemoPage() {
             {[
               {
                 title: 'Platform Overview',
-                description: 'See how our intuitive interface makes practice management effortless'
+                description: 'See how our intuitive interface streamlines your sales process'
               },
               {
                 title: 'Custom Solutions',
-                description: 'Learn how we can adapt to your specific practice needs'
+                description: 'Learn how we adapt to your specific business needs'
               },
               {
                 title: 'ROI Analysis',
-                description: 'Understand the potential return on investment for your practice'
+                description: 'Understand the potential revenue impact for your business'
               },
               {
                 title: 'Feature Deep-Dive',
-                description: 'Explore the key features that will transform your practice'
+                description: 'Explore the key features that will transform your sales'
               },
               {
                 title: 'Implementation Plan',
-                description: 'Get a clear roadmap for getting started with MED1'
+                description: 'Get a clear roadmap for getting started with HTSP'
               },
               {
                 title: 'Q&A Session',
-                description: 'Get all your questions answered by our experts'
+                description: 'Get all your questions answered by our sales experts'
               }
             ].map((item, index) => (
               <motion.div
@@ -682,12 +681,12 @@ export default function DemoPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                className="bg-zinc-900/50 p-6 rounded-lg border border-zinc-800 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:bg-zinc-900/80 transition-all duration-300"
               >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 tracking-[-0.03em]">
+                <h3 className="text-lg font-light text-white mb-2 tracking-[-0.03em]">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 tracking-[-0.03em]">{item.description}</p>
+                <p className="text-zinc-400 tracking-[-0.03em]">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -695,7 +694,7 @@ export default function DemoPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 bg-white">
+      <section className="py-16 px-4 sm:px-6 bg-black border-t border-zinc-800">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -703,7 +702,7 @@ export default function DemoPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 tracking-[-0.03em]">
+            <h2 className="text-3xl font-extralight mb-4 text-white tracking-[-0.03em]">
               Frequently Asked Questions
             </h2>
           </motion.div>
@@ -715,8 +714,8 @@ export default function DemoPage() {
                 answer: 'Our demos typically last 30 minutes, with additional time for questions if needed.'
               },
               {
-                question: 'Is the demo personalized to my practice?',
-                answer: 'Yes, we tailor each demo to your specific practice needs and specialty.'
+                question: 'Is the demo personalized to my business?',
+                answer: 'Yes, we tailor each demo to your specific business needs and goals.'
               },
               {
                 question: 'What should I prepare for the demo?',
@@ -724,7 +723,7 @@ export default function DemoPage() {
               },
               {
                 question: 'Can I invite my team members?',
-                answer: 'Absolutely! We encourage including key team members in the demo.'
+                answer: 'Absolutely! We encourage including key stakeholders in the demo.'
               }
             ].map((item, index) => (
               <motion.div
@@ -732,12 +731,12 @@ export default function DemoPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-gray-50 p-6 rounded-lg"
+                className="bg-zinc-900/50 p-6 rounded-lg border border-zinc-800"
               >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 tracking-[-0.03em]">
+                <h3 className="text-lg font-light text-white mb-2 tracking-[-0.03em]">
                   {item.question}
                 </h3>
-                <p className="text-gray-600 tracking-[-0.03em]">{item.answer}</p>
+                <p className="text-zinc-400 tracking-[-0.03em]">{item.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -745,12 +744,12 @@ export default function DemoPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 sm:py-8 px-4 sm:px-6 border-t border-gray-100 bg-white">
+      <footer className="py-6 sm:py-8 px-4 sm:px-6 border-t border-zinc-800 bg-black">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col sm:flex-row justify-between items-center">
-            <img src="@logo.png" alt="Logo" className="h-6 mb-4 sm:mb-0" />
-            <p className="text-gray-600 text-xs sm:text-sm tracking-[-0.03em]">
-              © 2024 MED1. All rights reserved.
+            <img src="/logo.png" alt="HTSP Logo" className="h-6 brightness-0 invert" />
+            <p className="text-zinc-400 text-xs sm:text-sm tracking-[-0.03em]">
+              © 2024 HTSP. All rights reserved.
             </p>
           </div>
         </div>
@@ -765,7 +764,7 @@ export default function DemoPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex items-center justify-center"
+              className="fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] flex items-center justify-center"
               onClick={() => setShowConfirmation(false)}
             >
               {/* Modal */}
@@ -773,16 +772,16 @@ export default function DemoPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="w-full max-w-sm bg-white rounded-xl shadow-2xl z-[101] p-8 mx-4"
+                className="w-full max-w-sm bg-zinc-900 rounded-xl border border-zinc-800 shadow-2xl z-[101] p-8 mx-4"
               >
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckIcon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-black mb-4">
+                  <h3 className="text-2xl font-light text-white mb-4">
                     Request Received!
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-zinc-400">
                     We'll contact you soon to schedule your demo.
                   </p>
                 </div>

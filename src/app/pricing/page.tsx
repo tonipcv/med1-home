@@ -6,6 +6,14 @@ import { motion } from 'framer-motion';
 import { CheckIcon } from '@heroicons/react/24/outline';
 
 export default function PricingPage() {
+  const handleGetStarted = (tier: any) => {
+    if (tier.price === 'Custom') {
+      window.location.href = '/demo';
+    } else {
+      window.location.href = '/auth/signup';
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -116,8 +124,9 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Button 
-                  className={`w-full ${tier.popular ? 'bg-[#eaf212] text-gray-800 hover:bg-[#eaf212]/90' : 'bg-gray-900 text-white hover:bg-gray-800'} transition-all duration-300 px-6 py-3 text-sm font-medium tracking-[-0.03em] rounded-full`}
+                <Button
+                  onClick={() => handleGetStarted(tier)}
+                  className="bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95 w-full"
                 >
                   {tier.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
                 </Button>
