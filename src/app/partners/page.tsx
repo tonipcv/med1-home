@@ -38,226 +38,114 @@ export default function PartnersPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-zinc-800">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <img src="/logo.png" alt="Logo" className="h-8" />
-            <div className="flex items-center gap-6">
-              <a href="/partners" className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-[-0.03em] hidden md:block">
-                Partners
-              </a>
-              <a href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors text-sm tracking-[-0.03em] hidden md:block">
-                Pricing
-              </a>
-              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 hover:bg-transparent px-3 py-2 text-sm tracking-[-0.03em]">
-                Sign In
-              </Button>
-              <Button
-                onClick={handleGetStarted}
+            <img src="/logo.png" alt="HTSP Logo" className="h-8 brightness-0 invert" />
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-10">
+              <Button 
+                onClick={() => window.location.href = '/auth/signin'}
                 className="bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95"
               >
-                Get Started
+                Sign In
               </Button>
-              <button className="md:hidden text-gray-600 hover:text-gray-900 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu */}
-      <div className="fixed inset-0 z-50 bg-white md:hidden hidden">
-        <div className="flex flex-col h-full">
-          <div className="flex items-center justify-between p-6 border-b border-gray-100">
-            <img src="/logo.png" alt="Logo" className="h-8" />
-            <button className="text-gray-600 hover:text-gray-900 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <div className="flex-1 overflow-y-auto">
-            <nav className="px-6 py-4 space-y-1">
-              <a href="/partners" className="block py-3 text-base text-gray-900 hover:text-gray-600 transition-colors tracking-[-0.03em]">
-                Partners
-              </a>
-              <a href="/pricing" className="block py-3 text-base text-gray-900 hover:text-gray-600 transition-colors tracking-[-0.03em]">
-                Pricing
-              </a>
-            </nav>
-            <div className="px-6 py-4 border-t border-gray-100">
-              <Button variant="ghost" className="w-full justify-center text-gray-900 hover:text-gray-600 hover:bg-transparent py-3 text-base tracking-[-0.03em]">
-                Sign In
-              </Button>
-              <Button className="w-full justify-center bg-[#eaf212] text-gray-800 hover:bg-[#eaf212]/90 transition-all duration-300 mt-3 py-3 text-base tracking-[-0.03em] rounded-md">
-                Get Started
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Content */}
-      <section className="pt-32 pb-20 px-4 sm:px-6">
-        <div className="container mx-auto max-w-2xl">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 tracking-[-0.03em]">
-              Partner with MED1
+      <section className="pt-32 pb-16 px-4 sm:px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl sm:text-5xl font-extralight mb-4 text-white tracking-[-0.03em]">
+              Partner with HTSP
             </h1>
-            <p className="text-gray-600 tracking-[-0.03em]">
-              Join our network of healthcare marketing agencies
+            <p className="text-xl text-zinc-400 tracking-[-0.03em]">
+              Join our network of high-ticket sales experts
             </p>
-          </motion.div>
+          </div>
 
-          {/* Form */}
-          <motion.form
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            onSubmit={handleSubmit}
-            className="space-y-6 bg-gray-50 p-8 rounded-lg border border-gray-200"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form className="bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+            <div className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 tracking-[-0.03em]">
-                  Agency Name
+                <label htmlFor="name" className="block text-sm font-light text-zinc-400 mb-1">
+                  Full Name
                 </label>
-                <Input
+                <input
                   type="text"
-                  name="agencyName"
-                  value={formData.agencyName}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-white h-11 text-base px-4 rounded-md border-gray-200 focus:border-gray-300 focus:ring-1 focus:ring-gray-100"
-                  placeholder="Your agency name"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 tracking-[-0.03em]">
-                  Website
-                </label>
-                <Input
-                  type="url"
-                  name="website"
-                  value={formData.website}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-white h-11 text-base px-4 rounded-md border-gray-200 focus:border-gray-300 focus:ring-1 focus:ring-gray-100"
-                  placeholder="https://your-agency.com"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 tracking-[-0.03em]">
-                  Contact Name
-                </label>
-                <Input
-                  type="text"
-                  name="contactName"
-                  value={formData.contactName}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-white h-11 text-base px-4 rounded-md border-gray-200 focus:border-gray-300 focus:ring-1 focus:ring-gray-100"
+                  id="name"
+                  name="name"
+                  className="w-full px-4 py-2 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:ring-2 focus:ring-white/10 focus:border-transparent text-white placeholder-zinc-500"
                   placeholder="Your name"
                 />
               </div>
+
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 tracking-[-0.03em]">
+                <label htmlFor="email" className="block text-sm font-light text-zinc-400 mb-1">
                   Email
                 </label>
-                <Input
+                <input
                   type="email"
+                  id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-white h-11 text-base px-4 rounded-md border-gray-200 focus:border-gray-300 focus:ring-1 focus:ring-gray-100"
-                  placeholder="your@email.com"
+                  className="w-full px-4 py-2 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:ring-2 focus:ring-white/10 focus:border-transparent text-white placeholder-zinc-500"
+                  placeholder="you@company.com"
                 />
               </div>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 tracking-[-0.03em]">
-                  Phone
+                <label htmlFor="company" className="block text-sm font-light text-zinc-400 mb-1">
+                  Company
                 </label>
-                <Input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-white h-11 text-base px-4 rounded-md border-gray-200 focus:border-gray-300 focus:ring-1 focus:ring-gray-100"
-                  placeholder="+1 (555) 000-0000"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 tracking-[-0.03em]">
-                  Number of Healthcare Clients
-                </label>
-                <Input
+                <input
                   type="text"
-                  name="clients"
-                  value={formData.clients}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-white h-11 text-base px-4 rounded-md border-gray-200 focus:border-gray-300 focus:ring-1 focus:ring-gray-100"
-                  placeholder="e.g., 5-10, 10-20, 20+"
+                  id="company"
+                  name="company"
+                  className="w-full px-4 py-2 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:ring-2 focus:ring-white/10 focus:border-transparent text-white placeholder-zinc-500"
+                  placeholder="Your company name"
                 />
               </div>
-            </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 tracking-[-0.03em]">
-                Services Offered
-              </label>
-              <Input
-                type="text"
-                name="services"
-                value={formData.services}
-                onChange={handleChange}
-                required
-                className="w-full bg-white h-11 text-base px-4 rounded-md border-gray-200 focus:border-gray-300 focus:ring-1 focus:ring-gray-100"
-                placeholder="e.g., Digital Marketing, SEO, Social Media"
-              />
-            </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-light text-zinc-400 mb-1">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  className="w-full px-4 py-2 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:ring-2 focus:ring-white/10 focus:border-transparent text-white placeholder-zinc-500"
+                  placeholder="Tell us about your partnership interest"
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 tracking-[-0.03em]">
-                Additional Information
-              </label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={4}
-                className="w-full bg-white rounded-md border border-gray-200 px-4 py-3 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-100 focus:border-gray-300 resize-none"
-                placeholder="Tell us about your agency and why you'd like to partner with MED1"
-              />
+              <Button
+                type="submit"
+                className="w-full bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95"
+              >
+                Submit
+              </Button>
             </div>
-
-            <Button 
-              type="submit"
-              className="w-full bg-[#eaf212] text-gray-800 hover:bg-[#eaf212]/90 transition-all duration-300 px-6 py-3 text-base font-medium tracking-[-0.03em] rounded-md mt-2"
-            >
-              Submit Partnership Request
-            </Button>
-          </motion.form>
+          </form>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="py-6 sm:py-8 px-4 sm:px-6 border-t border-zinc-800 bg-black">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <img src="/logo.png" alt="HTSP Logo" className="h-6 brightness-0 invert" />
+            <p className="text-zinc-400 text-xs sm:text-sm tracking-[-0.03em]">
+              © 2024 HTSP. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 } 

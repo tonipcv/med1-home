@@ -399,9 +399,6 @@ export default function DemoPage() {
               <a href="/partners" className="text-zinc-400 hover:text-white transition-colors text-sm tracking-[-0.03em]">
                 Partners
               </a>
-              <a href="/pricing" className="text-zinc-400 hover:text-white transition-colors text-sm tracking-[-0.03em]">
-                Pricing
-              </a>
               <Button 
                 onClick={() => window.location.href = '/auth/signin'}
                 className="bg-zinc-900/80 text-white hover:bg-zinc-800 transition-all duration-300 px-4 sm:px-8 py-2.5 sm:py-3 text-sm font-light tracking-[-0.03em] rounded-full border border-zinc-700/50 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] hover:border-zinc-600 hover:scale-105 active:scale-95"
@@ -464,13 +461,6 @@ export default function DemoPage() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Partners
-                  </a>
-                  <a
-                    href="/pricing"
-                    className="text-base text-zinc-400 hover:text-white transition-colors tracking-[-0.03em] py-2"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Pricing
                   </a>
                   <Button
                     onClick={() => {
