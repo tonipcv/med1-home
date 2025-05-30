@@ -50,7 +50,7 @@ export default function HomePage() {
                 Pricing
               </a>
               <Button 
-                onClick={() => window.location.href = 'https://www.med1.app/auth/signin'}
+                onClick={() => window.location.href = 'https://www.cxlus.com/auth/signin'}
                 className="bg-[#eaf212] text-black hover:bg-[#eaf212]/90 transition-colors px-6 py-2 text-sm font-medium tracking-[-0.03em] rounded-full"
               >
                 Sign In
@@ -402,7 +402,7 @@ export default function HomePage() {
                   step: "02", 
                   icon: <ArrowTrendingUpIcon className="w-6 h-6 text-white" />,
                   title: 'Deliver tailored follow-ups that feel one-on-one',
-                  description: 'MED1 tracks every interaction and stage, sending reminders, content, and offers that match exactly where the client is in their journey.',
+                  description: 'CXLUS tracks every interaction and stage, sending reminders, content, and offers that match exactly where the client is in their journey.',
                   color: 'bg-green-500'
                 },
                 {
@@ -423,7 +423,7 @@ export default function HomePage() {
                   step: "05",
                   icon: <GiftIcon className="w-6 h-6 text-white" />,
                   title: 'Grow through love — and track every referral',
-                  description: 'MED1 invites satisfied clients to share their experience, refer friends, and leave glowing reviews — all tracked and rewarded.',
+                  description: 'CXLUS invites satisfied clients to share their experience, refer friends, and leave glowing reviews — all tracked and rewarded.',
                   color: 'bg-pink-500'
                 }
               ].map((item, index) => (
@@ -481,7 +481,7 @@ export default function HomePage() {
                     step: "02", 
                     icon: <ArrowTrendingUpIcon className="w-8 h-8 text-white" />,
                     title: 'Deliver tailored follow-ups that feel one-on-one',
-                    description: 'MED1 tracks every interaction and stage, sending reminders, content, and offers that match exactly where the client is in their journey.',
+                    description: 'CXLUS tracks every interaction and stage, sending reminders, content, and offers that match exactly where the client is in their journey.',
                     side: 'right',
                     color: 'bg-green-500'
                   },
@@ -505,7 +505,7 @@ export default function HomePage() {
                     step: "05",
                     icon: <GiftIcon className="w-8 h-8 text-white" />,
                     title: 'Grow through love — and track every referral',
-                    description: 'MED1 invites satisfied clients to share their experience, refer friends, and leave glowing reviews — all tracked and rewarded.',
+                    description: 'CXLUS invites satisfied clients to share their experience, refer friends, and leave glowing reviews — all tracked and rewarded.',
                     side: 'left',
                     color: 'bg-pink-500'
                   }
@@ -632,7 +632,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MED1 Plans Section */}
+      {/* CXLUS Plans Section */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
@@ -642,7 +642,7 @@ export default function HomePage() {
             className="text-center mb-12 sm:mb-16"
           >
             <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-gray-900 tracking-[-0.03em]">
-              MED1 Plans
+              CXLUS Plans
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base tracking-[-0.03em]">
               Choose the right experience for your clinic — and your clients.
@@ -803,20 +803,20 @@ export default function HomePage() {
               What Our Partners Say
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base tracking-[-0.03em]">
-              See how MED1 is transforming client experiences and driving practice growth
+              See how CXLUS is transforming client experiences and driving practice growth
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
-                quote: "MED1 transformed how our clients experience care. The personalized client areas and AI support make every interaction feel special. Our client satisfaction scores have never been higher.",
+                quote: "CXLUS transformed how our clients experience care. The personalized client areas and AI support make every interaction feel special. Our client satisfaction scores have never been higher.",
                 author: "Dr. Elena Rodriguez",
                 specialty: "Aesthetic Medicine",
                 location: "Miami, FL"
               },
               {
-                quote: "MED1's AI knows exactly when to ask for reviews - our 5-star ratings increased by 300%. The personalized client experience allowed us to increase our service prices by 40% because clients see the premium value we deliver.",
+                quote: "CXLUS's AI knows exactly when to ask for reviews - our 5-star ratings increased by 300%. The personalized client experience allowed us to increase our service prices by 40% because clients see the premium value we deliver.",
                 author: "Dr. James Chen",
                 specialty: "Wellness Practitioner", 
                 location: "San Francisco, CA"
@@ -861,10 +861,10 @@ export default function HomePage() {
             className="text-center mb-12 sm:mb-16"
           >
             <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-gray-900 tracking-[-0.03em]">
-              Why Choose MED1?
+              Why Choose CXLUS?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base tracking-[-0.03em]">
-              Compare how MED1 transforms your client experience and practice growth
+              Compare how CXLUS transforms your client experience and practice growth
             </p>
           </motion.div>
 
@@ -880,7 +880,7 @@ export default function HomePage() {
                   <XMarkIcon className="w-6 h-6 text-gray-400" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 tracking-[-0.03em]">
-                  Without MED1
+                  Without CXLUS
                 </h3>
               </div>
               <ul className="space-y-4">
@@ -930,7 +930,7 @@ export default function HomePage() {
                   <CheckIcon className="w-6 h-6 text-gray-900" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 tracking-[-0.03em]">
-                  With MED1
+                  With CXLUS
                 </h3>
               </div>
               <ul className="space-y-4">
@@ -985,7 +985,7 @@ export default function HomePage() {
               Benefits
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto tracking-[-0.03em]">
-              Discover how MED1 transforms client experiences and drives sustainable growth
+              Discover how CXLUS transforms client experiences and drives sustainable growth
             </p>
           </motion.div>
 
@@ -1138,7 +1138,7 @@ export default function HomePage() {
               />
             </div>
             <p className="text-gray-600 text-sm sm:text-base tracking-[-0.03em] font-medium max-w-2xl">
-              We take privacy seriously. MED1 follows strict data protection standards under UK & EU regulations.
+              We take privacy seriously. CXLUS follows strict data protection standards under UK & EU regulations.
             </p>
           </motion.div>
         </div>
@@ -1150,7 +1150,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <img src="/logo.png" alt="Logo" className="h-6 mb-4 sm:mb-0" />
             <p className="text-gray-600 text-xs sm:text-sm tracking-[-0.03em]">
-              © 2024 MED1. All rights reserved.
+              © 2024 CXLUS. All rights reserved.
             </p>
           </div>
         </div>

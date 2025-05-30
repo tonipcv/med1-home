@@ -34,7 +34,7 @@ export default function PricingPage() {
                 Pricing
               </a>
               <Button 
-                onClick={() => window.location.href = 'https://www.med1.app/auth/signin'}
+                onClick={() => window.location.href = 'https://www.cxlus.com/auth/signin'}
                 className="bg-[#eaf212] text-black hover:bg-[#eaf212]/90 transition-colors px-6 py-2 text-sm font-medium tracking-[-0.03em] rounded-full"
               >
                 Sign In
@@ -105,7 +105,7 @@ export default function PricingPage() {
                   </a>
                   <Button
                     onClick={() => {
-                      window.location.href = 'https://www.med1.app/auth/signin';
+                      window.location.href = 'https://www.cxlus.com/auth/signin';
                       setIsMenuOpen(false);
                     }}
                     className="w-full bg-[#eaf212] text-gray-800 hover:bg-[#eaf212]/90 transition-colors py-3 text-base font-medium tracking-[-0.03em] rounded-full mt-4"
@@ -129,7 +129,7 @@ export default function PricingPage() {
             className="text-center mb-12 sm:mb-16"
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 tracking-[-0.03em]">
-              MED1 Plans
+              CXLUS Plans
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto tracking-[-0.03em]">
               Choose the right experience for your clinic — and your clients.
@@ -386,7 +386,7 @@ export default function PricingPage() {
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <img src="/logo.png" alt="Logo" className="h-6 mb-4 sm:mb-0" />
             <p className="text-gray-600 text-xs sm:text-sm tracking-[-0.03em]">
-              © 2024 MED1. All rights reserved.
+              © 2024 CXLUS. All rights reserved.
             </p>
           </div>
         </div>

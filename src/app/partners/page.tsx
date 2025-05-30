@@ -104,7 +104,7 @@ export default function PartnersPage() {
             className="text-center mb-12"
           >
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 tracking-[-0.03em]">
-              Partner with MED1
+              Partner with CXLUS
             </h1>
             <p className="text-gray-600 tracking-[-0.03em]">
               Join our network of healthcare marketing agencies
@@ -237,7 +237,7 @@ export default function PartnersPage() {
                 onChange={handleChange}
                 rows={4}
                 className="w-full bg-white rounded-md border border-gray-200 px-4 py-3 text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-100 focus:border-gray-300 resize-none"
-                placeholder="Tell us about your agency and why you'd like to partner with MED1"
+                placeholder="Tell us about your agency and why you'd like to partner with CXLUS"
               />
             </div>
 
